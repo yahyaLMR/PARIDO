@@ -11,6 +11,7 @@ const products = [p3, p4, p6, p7, p8 ];
 
 const LandingPage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,12 +30,36 @@ const LandingPage = () => {
             <img src={logo} alt="PARIDO Logo" className="h-12 w-auto object-contain rounded-full" />
             <span className="text-2xl font-bold text-[#FE904D] tracking-wide">PARIDO</span>
           </div>
+          
+          {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
             <a href="#home" className="hover:text-[#FE904D] transition-colors duration-300 font-medium">Accueil</a>
             <a href="#products" className="hover:text-[#FE904D] transition-colors duration-300 font-medium">Produits</a>
             <a href="#contact" className="hover:text-[#FE904D] transition-colors duration-300 font-medium">Contact</a>
           </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden flex items-center">
+            <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-gray-600 hover:text-[#FE904D] focus:outline-none">
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                {isMobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-gray-100 py-2">
+            <a href="#home" onClick={() => setIsMobileMenuOpen(false)} className="block px-6 py-3 hover:bg-gray-50 hover:text-[#FE904D] transition-colors duration-300 font-medium">Accueil</a>
+            <a href="#products" onClick={() => setIsMobileMenuOpen(false)} className="block px-6 py-3 hover:bg-gray-50 hover:text-[#FE904D] transition-colors duration-300 font-medium">Produits</a>
+            <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="block px-6 py-3 hover:bg-gray-50 hover:text-[#FE904D] transition-colors duration-300 font-medium">Contact</a>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
@@ -90,7 +115,7 @@ const LandingPage = () => {
                     className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1D1D1D]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                <div className="absolute inset-0 bg-linear-to-t from-[#1D1D1D]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-white font-bold text-xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     Produit de Qualité
                   </span>
@@ -160,7 +185,7 @@ const LandingPage = () => {
               <div className="pt-8 mt-4 border-t border-gray-100">
                 <p className="font-bold text-[#1D1D1D] mb-4">Suivez-nous sur les réseaux</p>
                 <div className="flex gap-4">
-                  <a href="https://www.instagram.com/paridodentaire/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 text-white px-4 py-2 rounded-lg hover:opacity-90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                  <a href="https://www.instagram.com/paridodentaire/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-linear-to-tr from-yellow-400 via-red-500 to-purple-500 text-white px-4 py-2 rounded-lg hover:opacity-90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                     Instagram
                   </a>
