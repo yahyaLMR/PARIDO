@@ -191,7 +191,7 @@ const LandingPage = () => {
              <img src={logo} alt="PARIDO Logo" className="h-10 w-auto rounded-full opacity-80" />
              <span className="text-xl font-bold tracking-wider">PARIDO</span>
           </div>
-          <p className="text-gray-400 mb-6">&copy; {new Date().getFullYear()} Société PARIDO. Tous droits réservés.</p>
+          <p className="text-gray-400 mb-6">&copy; {new Date().getFullYear()} Société PARIDO. Tous droits réservés par <a href="https://github.com/yahyaLMR">Yahya Lmr.</a></p>
           <div className="flex justify-center gap-6 text-sm text-gray-500">
             <a href="#" className="hover:text-white transition-colors">Mentions légales</a>
             <a href="#" className="hover:text-white transition-colors">Politique de confidentialité</a>
