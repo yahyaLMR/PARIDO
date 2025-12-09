@@ -73,12 +73,12 @@ const LandingPage = () => {
             <p className="text-xl md:text-2xl mb-8 font-light opacity-95">
               Consommables dentaires de qualité supérieure pour les professionnels exigeants.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-8">
-              <div className="flex items-center gap-2 bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">
-                <span className="text-xl">💯</span> <span className="font-medium">Satisfaction garantie</span>
+            <div className="flex flex-col text-center sm:flex-row gap-4 justify-center md:justify-start mb-8">
+              <div className="flex items-center justify-center text-center gap-2 bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">
+                <span className="font-medium">Satisfaction garantie</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">
-                <span className="text-xl">🚚</span> <span className="font-medium">Livraison rapide partout</span>
+              <div className="flex items-center justify-center text-center gap-2 bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">
+                <span className="text-center font-medium">Livraison rapide partout</span>
               </div>
             </div>
             <a href="#contact" className="inline-block bg-white text-[#FE904D] font-bold py-4 px-10 rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 hover:shadow-xl transition-all duration-300 transform">
