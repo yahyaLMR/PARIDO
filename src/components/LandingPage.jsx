@@ -6,6 +6,13 @@ import p4 from '../assets/product 4.jpg';
 import p6 from '../assets/product 6.jpg';
 import p7 from '../assets/product 7.jpg';
 import p8 from '../assets/product 8.jpg';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import PhoneIcon from '@mui/icons-material/Phone';
+import EmailIcon from '@mui/icons-material/Email';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 const products = [p3, p4, p6, p7, p8 ];
 
@@ -41,13 +48,11 @@ const LandingPage = () => {
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
             <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-gray-600 hover:text-[#FE904D] focus:outline-none">
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMobileMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <CloseIcon className="h-6 w-6" />
                 ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  <MenuIcon className="h-6 w-6" />
                 )}
-              </svg>
             </button>
           </div>
         </div>
@@ -146,10 +151,7 @@ const LandingPage = () => {
               <div className="space-y-6">
                 <div className="flex items-start gap-5 group">
                   <div className="w-12 h-12 bg-[#FE904D]/10 rounded-2xl flex items-center justify-center text-[#FE904D] group-hover:bg-[#FE904D] group-hover:text-white transition-colors duration-300 shadow-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
+                    <LocationOnIcon className="h-6 w-6" />
                   </div>
                   <div>
                     <p className="font-bold text-[#1D1D1D] text-lg">Adresse</p>
@@ -159,9 +161,7 @@ const LandingPage = () => {
 
                 <div className="flex items-start gap-5 group">
                   <div className="w-12 h-12 bg-[#FE904D]/10 rounded-2xl flex items-center justify-center text-[#FE904D] group-hover:bg-[#FE904D] group-hover:text-white transition-colors duration-300 shadow-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
+                    <PhoneIcon className="h-6 w-6" />
                   </div>
                   <div>
                     <p className="font-bold text-[#1D1D1D] text-lg">Téléphone</p>
@@ -171,9 +171,7 @@ const LandingPage = () => {
 
                 <div className="flex items-start gap-5 group">
                   <div className="w-12 h-12 bg-[#FE904D]/10 rounded-2xl flex items-center justify-center text-[#FE904D] group-hover:bg-[#FE904D] group-hover:text-white transition-colors duration-300 shadow-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
+                    <EmailIcon className="h-6 w-6" />
                   </div>
                   <div>
                     <p className="font-bold text-[#1D1D1D] text-lg">Email</p>
@@ -186,11 +184,11 @@ const LandingPage = () => {
                 <p className="font-bold text-[#1D1D1D] mb-4">Suivez-nous sur les réseaux</p>
                 <div className="flex gap-4">
                   <a href="https://www.instagram.com/paridodentaire/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-linear-to-tr from-yellow-400 via-red-500 to-purple-500 text-white px-4 py-2 rounded-lg hover:opacity-90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    <InstagramIcon fontSize="small" />
                     Instagram
                   </a>
                   <a href="https://web.facebook.com/profile.php?id=100067949507937" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-[#1877F2] text-white px-4 py-2 rounded-lg hover:opacity-90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    <FacebookIcon fontSize="small" />
                     Facebook
                   </a>
                 </div>
