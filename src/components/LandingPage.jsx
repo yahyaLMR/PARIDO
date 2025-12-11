@@ -68,11 +68,11 @@ const LandingPage = () => {
       </nav>
 
       {/* Hero Section */}
-      <header id="home" className="relative bg-[#FE904D] text-[#1D1D1D] py-24 px-6 overflow-hidden">
+      <header id="home" className="relative bg-[#FE904D] text-[#1D1D1D] py-12 md:py-24 px-4 md:px-6 overflow-hidden">
         <div className="absolute inset-0 bg-white/5 backdrop-blur-[1px]"></div>
         <div className="container mx-auto flex flex-col md:flex-row items-center relative z-10">
           <div className="md:w-1/2 mb-12 md:mb-0 text-center md:text-left">
-            <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight drop-shadow-md">
+            <h1 className="text-3xl md:text-6xl font-extrabold mb-6 leading-tight drop-shadow-md">
               Bienvenue chez <br/> <span className="text-[#1D1D1D]">PARIDO</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 font-light opacity-95">
@@ -102,10 +102,10 @@ const LandingPage = () => {
       </header>
 
       {/* Products Section */}
-      <section id="products" className="py-24 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#1D1D1D] mb-4">Nos Produits</h2>
+      <section id="products" className="py-12 md:py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1D1D1D] mb-4">Nos Produits</h2>
             <div className="w-24 h-1 bg-[#FE904D] mx-auto rounded-full"></div>
             <p className="mt-4 text-[#1D1D1D] max-w-2xl mx-auto">Découvrez notre gamme complète de consommables dentaires conçus pour votre pratique quotidienne.</p>
           </div>
@@ -135,10 +135,10 @@ const LandingPage = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-gray-50 relative">
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Contactez-nous</h2>
+      <section id="contact" className="py-12 md:py-24 bg-gray-50 relative">
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Contactez-nous</h2>
             <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full"></div>
           </div>
           
@@ -182,7 +182,7 @@ const LandingPage = () => {
 
               <div className="pt-8 mt-4 border-t border-gray-100">
                 <p className="font-bold text-[#1D1D1D] mb-4">Suivez-nous sur les réseaux</p>
-                <div className="flex gap-4">
+                <div className="flex flex-wrap gap-4">
                   <a href="https://www.instagram.com/paridodentaire/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-linear-to-tr from-yellow-400 via-red-500 to-purple-500 text-white px-4 py-2 rounded-lg hover:opacity-90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
                     <InstagramIcon fontSize="small" />
                     Instagram
@@ -208,8 +208,8 @@ const LandingPage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#1D1D1D] text-white py-10 border-t border-gray-800">
-        <div className="container mx-auto px-6 text-center">
+      <footer className="bg-[#1D1D1D] text-white py-8 md:py-10 border-t border-gray-800">
+        <div className="container mx-auto px-4 md:px-6 text-center">
           <div className="flex justify-center items-center gap-3 mb-6">
              <img src={logo} alt="PARIDO Logo" className="h-10 w-auto rounded-full opacity-80" />
              <span className="text-xl font-bold tracking-wider">PARIDO</span>
